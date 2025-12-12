@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Venta de Muñecos de Stitch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #e0f6ff;
+        }
+
+        header {
+            background: #0077b6;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background: #023e8a;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background: #0096c7;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #023e8a;
+        }
+
+        .producto {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 6px rgba(0,0,0,0.1);
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            box-shadow: 0 0 6px rgba(0,0,0,0.1);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+
+        button {
+            background: #0077b6;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0096c7;
+        }
+
+        footer {
+            background: #023e8a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+
+    <script>
+        function mostrarSeccion(id) {
+            document.querySelectorAll(".seccion").forEach(s => s.style.display = "none");
+            document.getElementById(id).style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h1>Venta de Muñecos de Stitch</h1>
+</header>
+
+<nav>
+    <a href="#" onclick="mostrarSeccion('inicio')">Inicio</a>
+    <a href="#" onclick="mostrarSeccion('sobre')">Sobre Nosotros</a>
+    <a href="#" onclick="mostrarSeccion('productos')">Productos</a>
+    <a href="#" onclick="mostrarSeccion('contacto')">Contacto</a>
+</nav>
+
+<!-- INICIO -->
+<section id="inicio" class="seccion">
+    <h2>Bienvenidos</h2>
+    <p>¡Bienvenidos a la Tienda de Stitch! Aquí encontrarás los mejores muñecos, peluches y artículos exclusivos del personaje más tierno y travieso del universo Disney.</p>
+
+   <div style="text-align:center; margin-top:20px;">
+        <img src= "https://s.pinimg.com/webapp/gestalt-687b504dc284500d.css" 
+             alt="Stitch Imagen Bonita"
+             style="width: 350px; border-radius: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+    </div>
+
+</section>
+
+<!-- SOBRE NOSOTROS -->
+<section id="sobre" class="seccion" style="display:none;">
+    <h2>Sobre Nosotros</h2>
+    <p>Somos una tienda dedicada 100% a la venta de muñecos y artículos inspirados en Stitch. Este proyecto nació gracias a nuestro amor por este personaje y por el deseo de ofrecer productos de alta calidad a fans de todas las edades.
+Nos apasiona diseñar y seleccionar muñecos que no solo sean tiernos y divertidos, sino también duraderos, seguros y llenos de detalles únicos.
+
+Nuestro compromiso es brindar atención personalizada, precios accesibles y envíos rápidos a cualquier parte del mundo.
+Trabajamos cada día para convertirnos en la tienda favorita de todos los amantes de Stitch. ¡Gracias por confiar en nosotros!.</p>
+</section>
+
+<!-- PRODUCTOS -->
+<section id="productos" class="seccion" style="display:none;">
+    <h2>Nuestros Productos</h2>
+
+    <div class="producto">
+        <h3>Muñeco Stitch Clásico</h3>
+        <p>Suave, tierno y de excelente calidad.</p>
+    </div>
+
+    <div class="producto">
+        <h3>Stitch Durmiendo</h3>
+        <p>Perfecto para decorar o dormir abrazado.</p>
+    </div>
+
+    <div class="producto">
+        <h3>Stitch Angel Edition</h3>
+        <p>Incluye ropa y accesorios exclusivos.</p>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="seccion" style="display:none;">
+    <h2>Formulario de Contacto</h2>
+
+    <form>
+        <label>Nombre Completo</label>
+        <input type="text" required>
+
+        <label>Correo Electrónico</label>
+        <input type="email" required>
+
+        <label>Número de Teléfono</label>
+        <input type="tel" required>
+
+        <label>Dirección Completa</label>
+        <input type="text" required>
+
+        <label>País</label>
+        <select required>
+            <option>México</option>
+            <option>España</option>
+            <option>Argentina</option>
+            <option>Colombia</option>
+            <option>Perú</option>
+            <option>Chile</option>
+            <option>Otro</option>
+        </select>
+
+        <label>Número de Tarjeta (solo demostración)</label>
+        <input type="text" maxlength="16">
+
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<footer>
+    © 2025 Tienda de Stitch - Todos los derechos reservados
+</footer>
+
+</body>
+</html>
